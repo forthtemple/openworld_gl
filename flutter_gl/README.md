@@ -1,5 +1,13 @@
 # Flutter GL
 
+Updated to work for android fixing the:
+```
+The Android Gradle plugin supports only Kotlin Gradle plugin version 1.5.20 and higher.
+The following dependencies do not satisfy the required version:
+project ':flutter_gl' -> org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
+```
+error
+
 cross-platform call OpenGL API by Dart through dart:ffi. Provides OpenGL with Texture Widget on Flutter. 
 
 Support iOS, Android, Web, macOS, Windows
