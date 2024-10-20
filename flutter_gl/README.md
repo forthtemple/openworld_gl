@@ -1,4 +1,6 @@
-# Flutter GL
+# OPENWORLD GL
+
+This is the flutter gl package updated to work with the latest version of gradle.
 
 cross-platform call OpenGL API by Dart through dart:ffi. Provides OpenGL with Texture Widget on Flutter. 
 
