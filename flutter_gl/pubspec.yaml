@@ -1,7 +1,7 @@
-name: flutter_gl
+name: openworld_gl
 description: cross-platform call OpenGL API by Dart through dart:ffi. 3D programming in the cross-platform.  Provides OpenGL with Texture Widget on Flutter. 
 version: 0.0.21
-homepage: https://github.com/wasabia/flutter_gl
+homepage: https://github.com/forthtemple/openworld_gl
 
 environment:
   sdk: ">=2.17.1 <3.0.0"

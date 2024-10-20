@@ -1,5 +1,5 @@
 import 'dart:typed_data';
-import 'package:flutter_gl/native-array/index.dart';
+import 'package:openworld_gl/native-array/index.dart';
 
 import 'OpenGL30Constant.dart';
 

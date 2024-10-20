@@ -1,7 +1,7 @@
 name: flutter_gl_platform_interface
 description: platform interface for flutter_gl
 version: 0.0.4
-homepage: https://github.com/wasabia/flutter_gl
+homepage: https://github.com/forthtemple/openworld_gl
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

@@ -2,8 +2,8 @@ import 'dart:ffi';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:ffi/ffi.dart';
-import 'package:flutter_gl/native-array/index.dart';
-import 'package:flutter_gl/openGL/opengl/OpenGLContextDesktop.dart';
+import 'package:openworld_gl/native-array/index.dart';
+import 'package:openworld_gl/openGL/opengl/OpenGLContextDesktop.dart';
 
 import 'OpenGL30Constant.dart';
 import 'opengl_es_bindings/src/gles_bindings.dart';
