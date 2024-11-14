@@ -49,7 +49,7 @@ class OpenGLES extends OpenGLBase {
     if (Platform.isAndroid) {
       return DynamicLibrary.open("libEGL.so");
     } else if (Platform.isWindows) {
-      return DynamicLibrary.open("flutter_gl_windows_plugin.dll");
+      return DynamicLibrary.open("openworld_gl_plugin.dll");
     } else {
       return DynamicLibrary.process();
     }

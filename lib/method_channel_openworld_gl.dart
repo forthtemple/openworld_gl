@@ -22,19 +22,19 @@ class MethodChannelOpenworldGl extends OpenworldGlPlatform {
 
   Future<List<int>> getEgl_interface(int textureId) async {
     final _args = {"textureId": textureId};
-    print("getEgl_interface in");
+   // print("getEgl_interface in");
     final _result = await _channel.invokeMethod('getEgl', _args);
-    print("getEgl_interface out"+_result.toString());
+   // print("getEgl_interface out"+_result.toString());
 
     return List<int>.from(_result);
   }
 
   Future updateTexture_interface(int textureId, sourceTexture) async {
-    print("method channel updatetexture");
+   // print("method channel updatetexture");
     final _args = {"textureId": textureId, "sourceTexture": sourceTexture};
-    print("method channel updatetextureii"+_args.toString());
+   // print("method channel updatetextureii"+_args.toString());
     final _result = await _channel.invokeMethod('updateTexture', _args);
-    print("method channel updatetextureiii"+_result.toString());
+    //print("method channel updatetextureiii"+_result.toString());
     return _result;
   }
 

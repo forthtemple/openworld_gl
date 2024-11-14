@@ -49,6 +49,8 @@ flutter:
         pluginClass: OpenworldGlPlugin
       macos:
         pluginClass: OpenworldGlPlugin
+      windows:
+        pluginClass: OpenworldGlPlugin
       #macos:
       #  default_package: flutter_gl_macos
       web:

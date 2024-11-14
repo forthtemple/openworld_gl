@@ -29,7 +29,7 @@ class OpenworldGlPlugin extends OpenworldGlPlatform {
 
   Future<Map<String, dynamic>> initialize(
       {Map<String, dynamic>? options}) async {
-    print("main openworldgl initalize");
+   // print("main openworldgl initalize");
     Map<String, dynamic> _options = {};
 
     _options.addAll(options ?? {});
@@ -50,15 +50,15 @@ class OpenworldGlPlugin extends OpenworldGlPlatform {
   prepareContext() async {
  //  print("prepare context main texture "+this.textureId!.toString());
   //  try {
-    print("preparecontext");
+   // print("preparecontext");
     egls = await OpenworldGlPlatform.instance.getEgl_interface(this.textureId!);
-    print("preparecontextii"+egls.toString());
+   // print("preparecontextii"+egls.toString());
 
    // await OpenworldGlPlatform.instance.getEgl_interface(this.textureId!);
     await Future.delayed(const Duration(milliseconds: 1000), () async {
       openGL.makeCurrent(egls);
     });
-    print("preparecontextiii");
+    //print("preparecontextiii");
     //} catch (error) {
     //  ... // executed for errors of all types other than Exception
     // print('errr!');
@@ -74,12 +74,12 @@ class OpenworldGlPlugin extends OpenworldGlPlatform {
 
   /// update texture to flutter
   Future updateTexture(sourceTexture) async {
-    print("updatetext in openworld_gl"+this.textureId.toString()+ " "+sourceTexture.toString());
+    //print("updatetext in openworld_gl"+this.textureId.toString()+ " "+sourceTexture.toString());
     return await OpenworldGlPlatform.instance.updateTexture_interface(this.textureId!, sourceTexture);
   }
 
   dispose() {
-    print("main dispose");
+  //  print("main dispose");
     return OpenworldGlPlatform.instance.dispose_interface(this.textureId!);
   }
 }
