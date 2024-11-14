@@ -1,12 +1,12 @@
 # OPENWORLD GL
 
 This is the flutter gl package updated to work with the latest version of gradle.  It is used to work with the https://github.com/forthtemple/openworlddart/ package.
+It also include Linux compatibility.
 
 cross-platform call OpenGL API by Dart through dart:ffi. Provides OpenGL with Texture Widget on Flutter. 
 
-Support iOS, Android, Web, macOS, Windows
+Support iOS, Android, Web, macOS, Windows, Linux
 
-Linux TODO
 
 Used by [three_dart](https://github.com/wasabia/three_dart)
 
