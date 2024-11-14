@@ -1,3 +1,3 @@
-## 0.0.21
+## 0.0.25
 
-* TODO: Describe initial release.
+* Includes Linux and Windows compatibility
