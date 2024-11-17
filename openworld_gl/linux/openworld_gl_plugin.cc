@@ -37,13 +37,7 @@ G_DEFINE_TYPE(OpenworldGlPlugin, openworld_gl_plugin, g_object_get_type())
 
 static void mylog(const std::string& input)
 {
-    std::ofstream myfile;
-    auto t = std::time(nullptr);
-    auto tm = *std::localtime(&t);
-    myfile.open("/home/skinhat/secondtemple.log",std::ios_base::app);
-    //std::cout << myfile.is_open() << std::endl;
-    myfile << std::put_time(&tm, "%d-%m-%Y %H-%M-%S") << " " << input<< "\n";
-    myfile.close();
+
 
     //cout << input << endl;
 }
