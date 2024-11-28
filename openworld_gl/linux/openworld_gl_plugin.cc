@@ -42,8 +42,6 @@ static void mylog(const std::string& input)
     //cout << input << endl;
 }
 
-//CustomRender *render = nullptr;
-//std::map<int64_t, std::unique_ptr<CustomRender>> renders_;//unique_ptr<CustomRender>> renders_;
 
 //mutable
 std::mutex mutex_;
@@ -53,16 +51,9 @@ static void openworld_gl_plugin_handle_method_call(
 	OpenworldGlPlugin *self,
 	FlMethodCall *method_call)
 {
-    /*std::ofstream outfile;
-    outfile.open("/home/glennlinde/secondtemple.log", std::ios::out);//, std::ios_base::app);//std::ios_base::app
-    outfile << "openworld_gl_plugin_handle_method_call";*/
 
- //   gdk_threads_init ();
-  //  gdk_threads_enter ();
 
- //   gtk_init(NULL,NULL);
 
- //   XInitThreads();
     //printf(".... openworld_gl_plugin_handle_method_call\n");
 	g_autoptr(FlMethodResponse) response = nullptr;
 
@@ -76,16 +67,12 @@ static void openworld_gl_plugin_handle_method_call(
 	if (strcmp(method, "initialize") == 0)  //createSurface
 	{
         printf(".... initialize here\n");
-      //  XInitThreads();
-
 
         FlValue *options =  fl_value_lookup_string(args, "options");
 		//int width =  0;//fl_value_lookup_string(options, "width");;
 		//int height = 0;//fl_value_lookup_int(options, "height");;
 		FlValue *w = fl_value_lookup_string(options, "width");
 		FlValue *h = fl_value_lookup_string(options, "height");
-     //   FlValue *dpr = fl_value_lookup_string(options, "dpr");
-       // printf(".... dpr %f\n",fl_value_get_float(dpr)); 1.000
 
 
         if (w != nullptr)
@@ -116,14 +103,13 @@ static void openworld_gl_plugin_handle_method_call(
 
            // printf(".... initialize %ld %ld\n",self->texture_registrar, self->width);
             printf(".... initialize  %d %d\n",self->width,self->height);
-            //gtk_init();
+
             self->window = gtk_widget_get_parent_window(GTK_WIDGET(self->fl_view));
 
 
-        //    self->context = gdk_window_create_gl_context(self->window, &error);
+
             CustomRender *customRender = new CustomRender(self->width,self->height,self->texture_registrar, self->window);//context);
             self->render=customRender;
-            //self->window);//std::make_unique<CustomRender>(width, height);//, texture_registrar_, m_hWnd);
 
             int64_t textureID = customRender->texture_id();
 
@@ -139,20 +125,17 @@ static void openworld_gl_plugin_handle_method_call(
 	} // end createSurface
     else if (strcmp(method, "getEgl") == 0)  //createSurface
     {
-    //    mutex_.lock();
+
         printf(".... getegl\n");
 
         g_autoptr(FlValue) fl_vector =self->render->getEgls();
         printf(".... getegl render getegls\n");
 
-      //  gdk_gl_context_clear_current();
         response = FL_METHOD_RESPONSE(fl_method_success_response_new(fl_vector));
 
     }
     else if (strcmp(method, "updateTexture") == 0)  //createSurface
     {
-       // gdk_window_show (self->window);
-       // printf(".... update texture %d\n",self->width);//renders_.size());
 
         int textureId = fl_value_get_int(fl_value_lookup_string(args, "textureId"));
         int sourceTexture  = fl_value_get_int(fl_value_lookup_string(args, "sourceTexture"));
@@ -175,12 +158,9 @@ static void openworld_gl_plugin_handle_method_call(
 		response = FL_METHOD_RESPONSE(fl_method_not_implemented_response_new());
 	}
 
-    //mylog("call respond");
 	fl_method_call_respond(method_call, response, nullptr);
   //  printf(".... call respond out\n");
-    //gdk_threads_leave ();
 
-    // mylog("call respond out");
 }
 
 static void openworld_gl_plugin_dispose(GObject *object)
