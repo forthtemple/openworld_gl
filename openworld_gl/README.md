@@ -17,7 +17,7 @@ only support draw to FBO. then share the FBO texture to Native side.
 ### import
 
 ```
-import 'package:openworld_gl/flutter_gl.dart';
+import 'package:openworld_gl/openworld_gl.dart';
 ```
 
 ### Usage
@@ -27,7 +27,7 @@ int width = 200;
 int height = 200;
 num dpr = 1.0;
 
-flutterGlPlugin = FlutterGlPlugin();
+flutterGlPlugin = OpenworldGlPlugin();
 
 Map<String, dynamic> _options = {
     "width": width, 
@@ -62,12 +62,12 @@ Dart List convert to ffi pointer need memeory copy.
 Clone or download this repo
 
 ```
-cd flutter_gl/flutter_gl/example
+cd openworld_gl/openworld_gl/example
 
 flutter run
 ```
 
-## share opengl context with flutter_gl
+## share opengl context with openworld_gl
 
 ### Android
 
